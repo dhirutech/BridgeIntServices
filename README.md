@@ -24,6 +24,12 @@ Clone this repo to your local machine using https://github.com/dhirutech/BridgeI
 git clone <path>
 dotnet build
 ```
+> To run the project
+```shell
+dotnet run
+```
+This will start local developement server to test the service directly from Swagger UI or can be tested from Postman.
+
 ## Running Tests
 
 > To run unit test cases
