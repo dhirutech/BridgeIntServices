@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/BridgeIntServices/bin/Debug/netcoreapp3.0
+/BridgeIntServices/obj
+/BridgeIntServices.Core/bin/Debug
+/BridgeIntServices.Core/obj
+/BridgeIntServices.Repositories/bin/Debug
+/BridgeIntServices.Repositories/obj
+/BridgeIntServices.Test/bin/Debug/netcoreapp3.0
+/BridgeIntServices.Test/obj
+/BridgeIntServices/.vs/BridgeIntServices
