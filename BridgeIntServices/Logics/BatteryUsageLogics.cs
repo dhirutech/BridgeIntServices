@@ -28,13 +28,13 @@ namespace BridgeIntServices.Logics
                  select new BatteryUsage
                  {
                      SerialNumber = devices.Key,
-                     AverageDailyBattery = GetAvarage(devices.OrderBy(d => d.Timestamp))
+                     AverageDailyBattery = GetAvarageBattery(devices.OrderBy(d => d.Timestamp))
                  }).ToList();
 
             return _helper.SuccessResponse("Operation successful", deviceUsageList);
         }
 
-        private string GetAvarage(IEnumerable<DeviceTrackPoint> trackPointsByDevice)
+        private string GetAvarageBattery(IEnumerable<DeviceTrackPoint> trackPointsByDevice)
         {
             if (trackPointsByDevice.Count() == 1)
                 return "unknown";
@@ -55,9 +55,9 @@ namespace BridgeIntServices.Logics
                 return "unknown";
 
             var timediff = lastTrackPoint.Timestamp - firstTrackPoint.Timestamp;
-            var tt = batteryLeveldownby / timediff.TotalHours * 24;
+            var avarageBattery = batteryLeveldownby / timediff.TotalHours * 24;
 
-            return tt.ToString("P", CultureInfo.InvariantCulture);
+            return avarageBattery.ToString("P", CultureInfo.InvariantCulture);
         }
     }
 }
