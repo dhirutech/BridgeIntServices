@@ -29,6 +29,7 @@ dotnet build
 dotnet run
 ```
 This will start local developement server to test the service directly from Swagger UI or can be tested from Postman.
+Or, open solution in Visual Studio to run and test with Swagger UI
 
 ## Running Tests
 
